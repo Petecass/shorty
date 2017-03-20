@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
+  resources :urls
   # # Overide default devise controllers
   devise_for :users, controllers: {
     # registrations: 'users/registrations',

@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Short url:
+  = @url.short_url
+p
+  strong Full url:
+  = @url.full_url
+p
+  strong Http status:
+  = @url.http_status
+p
+  strong Clicks:
+  = @url.clicks
+
+= link_to 'Edit', edit_url_path(@url)
+'  |
+= link_to 'Back', urls_path

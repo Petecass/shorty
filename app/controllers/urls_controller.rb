@@ -7,6 +7,15 @@ class UrlsController < ApplicationController
     @urls = Url.all
   end
 
+  def redirect
+    @link = Url.find_by(short_url: params[:short_url])
+    if @link
+      redirect_to @link.full_url, status: @link.http_status
+    else
+      redirect_to root_path, alert: 'Url not found'
+    end
+  end
+
   # GET /urls/1
   # GET /urls/1.json
   def show

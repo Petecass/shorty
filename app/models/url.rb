@@ -1,5 +1,4 @@
 class Url < ApplicationRecord
-
   validates :full_url, :http_status, presence: true
   validates :short_url, uniqueness: true
 

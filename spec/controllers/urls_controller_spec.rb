@@ -27,14 +27,6 @@ RSpec.describe UrlsController, type: :controller do
     end
   end
 
-  describe 'GET #edit' do
-    it 'assigns the requested url as @url' do
-      url = Url.create! valid_attributes
-      get :edit, params: { id: url.to_param }
-      expect(assigns(:url)).to eq(url)
-    end
-  end
-
   describe 'POST #create' do
     context 'with valid params' do
       it 'creates a new Url' do
@@ -64,47 +56,6 @@ RSpec.describe UrlsController, type: :controller do
       it 're-renders the "new" template' do
         post :create, params: { url: invalid_attributes }
         expect(response).to render_template('new')
-      end
-    end
-  end
-
-  describe 'PUT #update' do
-    context 'with valid params' do
-      let(:new_attributes) {
-        skip('Add a hash of attributes valid for your model')
-      }
-
-      it 'updates the requested url' do
-        url = Url.create! valid_attributes
-        put :update, params: { id: url.to_param, url: new_attributes }
-        url.reload
-        skip('Add assertions for updated state')
-      end
-
-      it 'assigns the requested url as @url' do
-        url = Url.create! valid_attributes
-        put :update, params: { id: url.to_param, url: valid_attributes }
-        expect(assigns(:url)).to eq(url)
-      end
-
-      it 'redirects to the url' do
-        url = Url.create! valid_attributes
-        put :update, params: { id: url.to_param, url: valid_attributes }
-        expect(response).to redirect_to(url)
-      end
-    end
-
-    context 'with invalid params' do
-      it 'assigns the url as @url' do
-        url = Url.create! valid_attributes
-        put :update, params: { id: url.to_param, url: invalid_attributes }
-        expect(assigns(:url)).to eq(url)
-      end
-
-      it 're-renders the "edit" template' do
-        url = Url.create! valid_attributes
-        put :update, params: { id: url.to_param, url: invalid_attributes }
-        expect(response).to render_template('edit')
       end
     end
   end

@@ -13,13 +13,28 @@ RSpec.describe Url, type: :model do
   end
 
   describe 'Callbacks' do
-    let(:url) { build(:url) }
-
     context '#generate_short_url' do
+      let(:url) { build(:url) }
       it 'saves a short_url after create' do
         url.save
         url.reload
         expect(url.short_url).to be_present
+      end
+    end
+
+    context '#sanitize' do
+      it 'adds http:// to the start of the original url' do
+        url = build(:url, full_url: 'blah.com')
+        url.save
+        url.reload
+        expect(url.full_url).to eq 'http://blah.com'
+      end
+
+      it 'does not strip https:// if present' do
+        url = build(:url, full_url: 'https://blah.com')
+        url.save
+        url.reload
+        expect(url.full_url).to eq 'https://blah.com'
       end
     end
   end

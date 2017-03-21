@@ -1,4 +1,14 @@
-= form_for @url do |f|
+
+ruby:
+  if local_assigns.has_key? :remote
+    remote = remote
+  else
+    remote = false
+  end
+
+
+= form_for @url, html: { class: 'ui form' }, remote: remote do |f|
+
   - if @url.errors.any?
     #error_explanation
       h2 = "#{pluralize(@url.errors.count, "error")} prohibited this url from being saved:"
@@ -6,16 +16,25 @@
         - @url.errors.full_messages.each do |message|
           li = message
 
-  .field
+  /.field
     = f.label :short_url
     = f.text_field :short_url
+
   .field
     = f.label :full_url
-    = f.text_area :full_url
-  .field
+
+    .ui.labeled.input
+      .ui.label
+        | http://
+      = f.text_field :full_url, placeholder: "mysite.com"
+
+  /.field
     = f.label :http_status
     = f.number_field :http_status
-  .field
+
+  /.field
     = f.label :clicks
     = f.number_field :clicks
-  .actions = f.submit
+
+  .field
+    = f.submit 'Shorten', class: 'ui button primary'

@@ -14,7 +14,7 @@ table
   tbody
     - @urls.each do |url|
       tr
-        td = url.short_url
+        td = shortened_url(url.short_url)
         td = url.full_url
         td = url.http_status
         td = url.clicks

@@ -1,16 +1,21 @@
 p#notice = notice
 
 p
-  strong Short url:
-  = @url.short_url
+  strong
+    ' Short url:
+  = shortened_url(@url.short_url)
+
 p
-  strong Full url:
+  strong
+    ' Full url:
   = @url.full_url
 p
-  strong Http status:
+  strong
+    ' Http status:
   = @url.http_status
 p
-  strong Clicks:
+  strong
+    ' Clicks:
   = @url.clicks
 
 = link_to 'Edit', edit_url_path(@url)

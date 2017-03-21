@@ -1,0 +1,12 @@
+.ui.form
+  .field
+
+    h3 Shortened url:
+    p
+      b
+        = shortened_url(@url.short_url)
+    br
+      / TODO Implement JS copy to clipboard
+        button class="ui teal right labeled icon button"
+          i class="copy icon"
+          | Copy

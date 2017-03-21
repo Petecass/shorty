@@ -38,10 +38,10 @@ class UrlsController < ApplicationController
     respond_to do |format|
       if @url.save
         format.html { redirect_to @url, notice: 'Url was successfully created.' }
-        format.json { render :show, status: :created, location: @url }
+        format.js
       else
         format.html { render :new }
-        format.json { render json: @url.errors, status: :unprocessable_entity }
+        # format.js { render json: @url.errors, status: :unprocessable_entity }
       end
     end
   end

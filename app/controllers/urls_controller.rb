@@ -41,7 +41,6 @@ class UrlsController < ApplicationController
         format.js
       else
         format.html { render :new }
-        # format.js { render json: @url.errors, status: :unprocessable_entity }
       end
     end
   end

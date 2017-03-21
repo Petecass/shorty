@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe UrlsController, type: :controller do
   let(:valid_attributes) { attributes_for(:url) }
-  let(:invalid_attributes) { attributes_for(:url) }
+  let(:invalid_attributes) { attributes_for(:url, full_url: '') }
 
   describe 'GET #index' do
     it 'assigns all urls as @urls' do

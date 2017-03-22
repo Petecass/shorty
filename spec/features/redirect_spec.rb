@@ -1,3 +1,5 @@
+# rubocop: disable Style/BlockDelimiters
+
 require 'rails_helper'
 
 feature 'Url rediect' do
@@ -12,9 +14,9 @@ feature 'Url rediect' do
 
   context 'with invalid url' do
     it 'displays an error' do
-      visit '/blah'
-      expect(current_path).to eq root_path
-      expect(page.body).to have_content('Url not found')
+      expect {
+        visit '/blah'
+      }.to raise_error(ActionController::RoutingError)
     end
   end
 end

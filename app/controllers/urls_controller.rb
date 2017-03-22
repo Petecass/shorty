@@ -12,7 +12,7 @@ class UrlsController < ApplicationController
     if @link
       redirect_to @link.full_url, status: @link.http_status
     else
-      redirect_to root_path, alert: 'Url not found'
+      not_found
     end
   end
 

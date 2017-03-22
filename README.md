@@ -5,7 +5,7 @@
 [![Test Coverage](https://codeclimate.com/github/Petecass/shorty/badges/coverage.svg)](https://codeclimate.com/github/Petecass/shorty/coverage)
 [![Issue Count](https://codeclimate.com/github/Petecass/shorty/badges/issue_count.svg)](https://codeclimate.com/github/Petecass/shorty)
 
-This is a very basic URL shortening app.
+This is a very basic URL shortening app. You can view a working example [here](https://immense-peak-65171.herokuapp.com/).
 
 The app is based off my [Rails-base application](https://github.com/Petecass/rails-base) which acts as a starting point for any rails 5 application some it comes with authentication by default.
 

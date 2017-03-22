@@ -2,6 +2,11 @@
 # Adds the following rake tasks
 # rake rubocop
 # rake rubocop:auto_correct
-# require 'rubocop/rake_task'
 
-# RuboCop::RakeTask.new
+begin
+  require 'rubocop/rake_task'
+  desc 'Lint all Ruby files'
+  RuboCop::RakeTask.new
+# rubocop: disable Lint/HandleExceptions
+rescue LoadError
+end

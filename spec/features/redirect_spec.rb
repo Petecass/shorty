@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # rubocop: disable Style/BlockDelimiters
 
 require 'rails_helper'

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class UrlsController < ApplicationController
   before_action :set_url, only: [:show, :edit, :update, :destroy]
 
@@ -70,13 +71,14 @@ class UrlsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_url
-      @url = Url.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def url_params
-      params.require(:url).permit(:short_url, :full_url, :http_status, :clicks)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_url
+    @url = Url.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def url_params
+    params.require(:url).permit(:short_url, :full_url, :http_status, :clicks)
+  end
 end

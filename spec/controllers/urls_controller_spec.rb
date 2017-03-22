@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+# rubocop: disable Style/BlockDelimiters
 require 'rails_helper'
 
 RSpec.describe UrlsController, type: :controller do

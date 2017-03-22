@@ -34,5 +34,7 @@ Style/ClassAndModuleChildren:
   Enabled: false
 Style/BlockComments:
   Enabled: false
+Style/EmptyMethod:
+  Enabled: false
 Style/TrailingCommaInLiteral:
   Enabled: false

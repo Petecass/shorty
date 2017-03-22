@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class Url < ApplicationRecord
   validates :full_url, :http_status, presence: true
   validates :short_url, uniqueness: true
@@ -7,11 +8,11 @@ class Url < ApplicationRecord
 
   private
 
-    def generate_short_url
-      self.short_url = SecureRandom.hex(3)
-    end
+  def generate_short_url
+    self.short_url = SecureRandom.hex(3)
+  end
 
-    def sanitize
-      self.full_url = "http://#{full_url}" unless full_url =~ /^https?:\/\//
-    end
+  def sanitize
+    self.full_url = "http://#{full_url}" unless full_url =~ %r{^https?:\/\/}
+  end
 end

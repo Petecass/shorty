@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 FactoryGirl.define do
   factory :url do
     full_url 'www.mygreatbiglongurl/blah/blah/something'

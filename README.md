@@ -1,15 +1,10 @@
 # README
 [![Build Status](https://travis-ci.org/Petecass/shorty.svg?branch=master)](https://travis-ci.org/Petecass/shorty)
 [![Dependency Status](https://gemnasium.com/badges/github.com/Petecass/shorty.svg)](https://gemnasium.com/github.com/Petecass/shorty)
-[![Code Climate](https://codeclimate.com/github/Petecass/shorty/badges/gpa.svg)](https://codeclimate.com/github/Petecass/shorty)
-[![Test Coverage](https://codeclimate.com/github/Petecass/shorty/badges/coverage.svg)](https://codeclimate.com/github/Petecass/shorty/coverage)
-[![Issue Count](https://codeclimate.com/github/Petecass/shorty/badges/issue_count.svg)](https://codeclimate.com/github/Petecass/shorty)
 
 This is a very basic URL shortening app. You can view a working example [here](https://immense-peak-65171.herokuapp.com/).
 
-The app is based off my [Rails-base application](https://github.com/Petecass/rails-base) which acts as a starting point for any rails 5 application some it comes with authentication by default.
-
-
+The app is based off my [Rails-base application](https://github.com/Petecass/rails-base) which acts as a starting point for any rails 5 application. It comes with authentication by default.
 
 To setup the project. Clone the repo and run through the steps below. Note I have only ever tested these steps on a Mac. Setup on Windows may differ.
 
